@@ -1,0 +1,1348 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../retouche-foudre/">
+      
+      
+        <link rel="next" href="../downloads/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Firmware - SC940 Board Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#documentation-du-firmware" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SC940 Board Documentation" class="md-header__button md-logo" aria-label="SC940 Board Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SC940 Board Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Firmware
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Architecture_Overview/" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../hardware/" class="md-tabs__link">
+          
+  
+  
+  Conception Matérielle
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Firmware
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../downloads/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Téléchargements
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SC940 Board Documentation" class="md-nav__button md-logo" aria-label="SC940 Board Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SC940 Board Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Architecture_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'Ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Power_Budget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Budget Puissance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conception Matérielle
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Conception Matérielle
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fichiers de Conception
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hardware_ChangeLog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Journal des Modifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DFM_Recommendations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recommandations DFM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../retouche-foudre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Retouche foudre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firmware
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#environnement-de-developpement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environnement de Développement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure du Projet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cartographie-memoire-eeprom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cartographie Mémoire (EEPROM)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctionnalites-cles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonctionnalités Clés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adressage-et-mapping-des-entrees-logique-vs-physique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adressage et Mapping des Entrées (Logique vs Physique)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adressage et Mapping des Entrées (Logique vs Physique)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-type_chambres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration TYPE_CHAMBRES
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyse-de-la-communication-maitre-esclave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analyse de la Communication Maître-Esclave
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyse de la Communication Maître-Esclave">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocole" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocole
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagramme-de-flux-logique-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagramme de Flux (Logique Firmware)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandes-du-protocole" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commandes du Protocole
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../downloads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Téléchargements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#environnement-de-developpement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environnement de Développement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-du-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure du Projet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cartographie-memoire-eeprom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cartographie Mémoire (EEPROM)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctionnalites-cles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fonctionnalités Clés
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adressage-et-mapping-des-entrees-logique-vs-physique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adressage et Mapping des Entrées (Logique vs Physique)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adressage et Mapping des Entrées (Logique vs Physique)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuration-type_chambres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration TYPE_CHAMBRES
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analyse-de-la-communication-maitre-esclave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analyse de la Communication Maître-Esclave
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analyse de la Communication Maître-Esclave">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#protocole" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocole
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagramme-de-flux-logique-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diagramme de Flux (Logique Firmware)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commandes-du-protocole" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commandes du Protocole
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="documentation-du-firmware">Documentation du Firmware</h1>
+<p>Le firmware de la carte <strong>SC940D</strong> est développé en C pour le microcontrôleur <strong>Microchip PIC16F946</strong>.</p>
+<h2 id="environnement-de-developpement">Environnement de Développement</h2>
+<ul>
+<li><strong>Compilateur</strong>: Hi-Tech C pour PIC10/12/16.</li>
+<li><strong>IDE</strong>: MPLAB X (Fichier projet <code>essensys_ba.X</code>).</li>
+<li><strong>MCU</strong>: PIC16F946.</li>
+<li><strong>Horloge</strong>: Oscillateur High Speed (HS).</li>
+<li><strong>Watchdog</strong>: Désactivé au démarrage (<code>WDTDIS</code>).</li>
+</ul>
+<h2 id="structure-du-projet">Structure du Projet</h2>
+<p>Le code source se trouve dans <code>SC940D/Prog/code_ba (fichiers sources 1.7)/source/</code>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Fichier</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>main.c</code></td>
+<td style="text-align: left;">Point d'entrée, initialisation et gestion EEPROM.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>hard.c/h</code></td>
+<td style="text-align: left;">Couche d'Abstraction Matérielle (HAL). Définition des broches et I/O de bas niveau.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>gestionentrees.c</code></td>
+<td style="text-align: left;">Traitement des signaux d'entrée et anti-rebond.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>gestionsorties.c</code></td>
+<td style="text-align: left;">Logique de commande des sorties (Relais).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>variateur.c</code></td>
+<td style="text-align: left;">Algorithmes de contrôle des gradateurs ("Variateurs").</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>traitement.c</code></td>
+<td style="text-align: left;">Logique applicative principale et machine à états.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>slavenode.c</code></td>
+<td style="text-align: left;">Implémentation du protocole de communication (Bus I2C).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cartographie-memoire-eeprom">Cartographie Mémoire (EEPROM)</h2>
+<p>L'EEPROM est utilisée pour stocker la configuration persistante et l'état.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Adresse</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>0x000D</code></td>
+<td style="text-align: left;">Version du Mapping EEPROM.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0x000E-0F</code></td>
+<td style="text-align: left;">Vérification d'initialisation (<code>0xAA55</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0x0010-11</code></td>
+<td style="text-align: left;">État des Relais (LSB/MSB).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0x0012-29</code></td>
+<td style="text-align: left;">Configuration Variateurs (Niveau actuel, Niveau sauvegardé, Mode).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0x002A-31</code></td>
+<td style="text-align: left;">Temps d'action des Volets.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0x0032-42</code></td>
+<td style="text-align: left;">Temps d'extinction des lampes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fonctionnalites-cles">Fonctionnalités Clés</h2>
+<ol>
+<li><strong>Persistance d'État</strong>: Les états des relais et niveaux des variateurs sont sauvegardés en EEPROM pour restaurer l'état après une coupure de courant.</li>
+<li><strong>Gestion des Entrées</strong>: Traitement direct des entrées numériques avec anti-rebond.</li>
+<li><strong>Contrôle de Charge</strong>:<ul>
+<li><strong>Relais</strong>: Contrôle simple On/Off.</li>
+<li><strong>Variateurs</strong>: Contrôle de phase ou PWM pour l'éclairage.</li>
+<li><strong>Volets</strong>: Contrôle temporisé pour l'ouverture/fermeture des stores.</li>
+</ul>
+</li>
+<li><strong>Communication</strong>: Utilise un protocole "Nœud Esclave" propriétaire, via I2C pour communiquer avec le contrôleur central (<code>SC944D</code>).</li>
+</ol>
+<h2 id="adressage-et-mapping-des-entrees-logique-vs-physique">Adressage et Mapping des Entrées (Logique vs Physique)</h2>
+<p>Le firmware utilise des tables de correspondance statiques (définies dans <code>gestionentrees.c</code>) pour associer les <strong>Entrées Logiques</strong> (index utilisé par le protocole) aux <strong>Broches Physiques</strong> du microcontrôleur (<code>ENTREE0</code> à <code>ENTREE21</code>).</p>
+<p>⚠️ <strong>Attention</strong> : Vous ne pouvez pas utiliser n'importe quelle broche d'entrée pour n'importe quelle fonction. L'assignation est fixée par la configuration logicielle de la carte (définie à la compilation par des <code>#define</code>).</p>
+<p>Voici les mappings extraits du code source :</p>
+<h3 id="configuration-type_chambres">Configuration <code>TYPE_CHAMBRES</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Type Logique</th>
+<th style="text-align: left;">Index Logique</th>
+<th style="text-align: left;">Mapped sur Physique</th>
+<th style="text-align: left;">Pin Physique (Est.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>TOR</strong></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;"><code>ENTREE0</code></td>
+<td style="text-align: left;">RB0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TOR</strong></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><code>ENTREE2</code></td>
+<td style="text-align: left;">RF4</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TOR</strong></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><code>ENTREE3</code></td>
+<td style="text-align: left;">RF3</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TOR</strong></td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><code>ENTREE9</code></td>
+<td style="text-align: left;">RG2</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TOR</strong></td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><code>ENTREE10</code></td>
+<td style="text-align: left;">RG1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TOR</strong></td>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><code>ENTREE14</code></td>
+<td style="text-align: left;">RD4</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TOR</strong></td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;"><code>ENTREE18</code></td>
+<td style="text-align: left;">RC0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Variateur</strong></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;"><code>ENTREE1</code></td>
+<td style="text-align: left;">RF5</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Variateur</strong></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><code>ENTREE8</code></td>
+<td style="text-align: left;">RG3</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Variateur</strong></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><code>ENTREE13</code></td>
+<td style="text-align: left;">RD5</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Variateur</strong></td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><code>ENTREE17</code></td>
+<td style="text-align: left;">RD0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Volet</strong></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;"><code>ENTREE4</code></td>
+<td style="text-align: left;">RF1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Volet</strong></td>
+<td style="text-align: left;">...</td>
+<td style="text-align: left;">...</td>
+<td style="text-align: left;">...</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Note : Les correspondances Pin/Port exactes dépendent de <code>hard.h</code>)</em></p>
+<p>Ce mécanisme confirme que même si les entrées <code>IN0</code> à <code>IN12</code> sont physiquement présentes sur le connecteur, elles ne seront "vues" par le firmware que si elles sont déclarées dans ces tables de mapping.</p>
+<h2 id="analyse-de-la-communication-maitre-esclave">Analyse de la Communication Maître-Esclave</h2>
+<p>La carte <strong>SC940D</strong> agit comme un module d'Entrée/Sortie esclave générique, piloté par un concentrateur maître (ex: <strong>944D</strong>).</p>
+<h3 id="protocole">Protocole</h3>
+<ul>
+<li><strong>Couche Physique</strong>: I2C (basé sur le nommage <code>slavenode.c</code> et l'usage de <code>SSPBUF</code>).</li>
+<li><strong>Mécanisme</strong>:<ol>
+<li><strong>Interruption</strong>: <code>SSP_Handler</code> reçoit les octets bruts dans <code>RXBuffer</code>.</li>
+<li><strong>Validation</strong>: Un Checksum est calculé (<code>us_CalculerCRCSurTrame</code>). Si valide, les données sont copiées dans <code>CmdBuf</code>.</li>
+<li><strong>Exécution</strong>: La boucle principale appelle <code>vd_Traitement_I2C</code> qui traite <code>CmdBuf</code>.</li>
+</ol>
+</li>
+</ul>
+<h3 id="diagramme-de-flux-logique-firmware">Diagramme de Flux (Logique Firmware)</h3>
+<pre class="mermaid"><code>graph TD
+    subgraph Interrupt[Interruption - ISR]
+        ISR(SSP_Handler) --&gt; Recv[Réception Octet]
+        Recv --&gt; Buffer{"Buffer Plein ?"}
+        Buffer -- Non --&gt; Store[Stockage RXBuffer]
+        Buffer -- Oui --&gt; Checksum[Vérif. Checksum]
+        Checksum -- Valide --&gt; Copy[Copie vers CmdBuf]
+        Checksum -- Invalide --&gt; Error[Flag Erreur]
+    end
+
+    subgraph MainLoop[Boucle Principale]
+        Start((Départ)) --&gt; Init[Initialisation]
+        Init --&gt; Loop{"While(1)"}
+        Loop --&gt; Task1[vd_Traitement_I2C]
+        Task1 --&gt; CmdCheck{"CmdBuf[0] != 0?"}
+
+        CmdCheck -- Oui --&gt; Switch[Switch Commande]
+        Switch --&gt; C1[C_FORCAGE_SORTIES]
+        Switch --&gt; C2[C_CONF_SORTIES]
+        Switch --&gt; C3[C_TPS_EXTINCTION]
+
+        C1 --&gt; Action1[MàJ Relais/Variateurs]
+        C2 --&gt; Action2[MàJ Config &amp; EEPROM]
+        C3 --&gt; Action3[MàJ Timers &amp; EEPROM]
+
+        Action1 --&gt; Reset["CmdBuf[0] = 0"]
+        Action2 --&gt; Reset
+        Action3 --&gt; Reset
+
+        Reset --&gt; Loop
+        CmdCheck -- Non --&gt; Loop
+    end</code></pre>
+<h3 id="commandes-du-protocole">Commandes du Protocole</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID Commande</th>
+<th style="text-align: left;">Nom</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>0x01</code></td>
+<td style="text-align: left;"><code>C_FORCAGE_SORTIES</code></td>
+<td style="text-align: left;">Force l'état des relais, variateurs ou volets.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0x02</code></td>
+<td style="text-align: left;"><code>C_CONF_SORTIES</code></td>
+<td style="text-align: left;">Configure le mode variateur (On/Off ou Gradation).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0x03</code></td>
+<td style="text-align: left;"><code>C_TPS_EXTINCTION</code></td>
+<td style="text-align: left;">Définit le temps d'extinction auto pour les lampes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0x04</code></td>
+<td style="text-align: left;"><code>C_TPS_ACTION</code></td>
+<td style="text-align: left;">Définit le temps de mouvement pour les volets.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0x05</code></td>
+<td style="text-align: left;"><code>C_ACTIONS</code></td>
+<td style="text-align: left;">Déclenche des actions globales (ex: Sauvegarde État).</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Essensys
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

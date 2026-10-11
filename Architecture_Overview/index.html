@@ -1,0 +1,1115 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Power_Budget/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Vue d'Ensemble - SC940 Board Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vue-densemble-de-larchitecture-boitier-essensys-sc940d" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SC940 Board Documentation" class="md-header__button md-logo" aria-label="SC940 Board Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SC940 Board Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vue d'Ensemble
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Architecture
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../hardware/" class="md-tabs__link">
+          
+  
+  
+  Conception Matérielle
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../firmware/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Firmware
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../downloads/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Téléchargements
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SC940 Board Documentation" class="md-nav__button md-logo" aria-label="SC940 Board Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SC940 Board Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'Ensemble
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vue d'Ensemble
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-description-generale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Description Générale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-cur-de-traitement-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Cœur de Traitement &amp; Communication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Cœur de Traitement &amp; Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microcontroleur-mcu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microcontrôleur (MCU)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cartes-gradateur-sc943-variateurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cartes gradateur SC943 (variateurs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-chaine-dalimentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Chaîne d'Alimentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-actionneurs-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Actionneurs &amp; Interfaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Actionneurs &amp; Interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sorties-relais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sorties Relais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecteurs-borniers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connecteurs / Borniers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-technologie-pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Technologie PCB
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Power_Budget/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Budget Puissance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conception Matérielle
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Conception Matérielle
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fichiers de Conception
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Hardware_ChangeLog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Journal des Modifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DFM_Recommendations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recommandations DFM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../retouche-foudre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Retouche foudre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../firmware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../downloads/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Téléchargements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-description-generale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Description Générale
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-cur-de-traitement-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Cœur de Traitement &amp; Communication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Cœur de Traitement &amp; Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microcontroleur-mcu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microcontrôleur (MCU)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cartes-gradateur-sc943-variateurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cartes gradateur SC943 (variateurs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-chaine-dalimentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Chaîne d'Alimentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-actionneurs-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Actionneurs &amp; Interfaces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Actionneurs &amp; Interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sorties-relais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sorties Relais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connecteurs-borniers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connecteurs / Borniers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-technologie-pcb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Technologie PCB
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="vue-densemble-de-larchitecture-boitier-essensys-sc940d">Vue d'ensemble de l'Architecture : Boîtier Essensys SC940D</h1>
+<h2 id="1-description-generale">1. Description Générale</h2>
+<p>Le <strong>SC940D</strong> est une unité centrale de contrôle ("Boîtier Pièce de Vie") conçue pour l'automatisation des bâtiments. Il agit comme une passerelle et un contrôleur d'actionneurs, gérant l'éclairage, les volets roulants et d'autres charges 230V via des relais embarqués.</p>
+<p><img alt="SC940D Schematic" src="../assets/schematic.png" /></p>
+<blockquote>
+<p><a href="../assets/SC940D_Schematic.pdf">Télécharger le Schéma Complet (PDF)</a></p>
+</blockquote>
+<h2 id="2-cur-de-traitement-communication">2. Cœur de Traitement &amp; Communication</h2>
+<h3 id="microcontroleur-mcu">Microcontrôleur (MCU)</h3>
+<ul>
+<li><strong>Composant</strong>: Microchip <strong>PIC16F946</strong> (MCU CMOS 8-bit).</li>
+<li><strong>Boîtier</strong>: 64-pin TQFP (<code>PIC16F946-I/PT</code>).</li>
+<li><strong>Rôle</strong>: Gère la logique locale, les signaux de contrôle des relais, et pilote les cartes gradateur SC943. <ul>
+<li><em>Note</em>: Le PIC16F946 possède un pilote LCD, mais il a probablement été choisi ici pour son grand nombre d'entrées/sorties (64 broches) ou pour des raisons d'historique composant.</li>
+</ul>
+</li>
+</ul>
+<p><img alt="MCU Schematic Detail" src="../assets/images/schematic_p2.png" /></p>
+<h3 id="cartes-gradateur-sc943-variateurs">Cartes gradateur SC943 (variateurs)</h3>
+<ul>
+<li><strong>Composant</strong>: <strong>SC943-0C</strong> (carte fille « Carte gradateur », révision SC943D), 3 exemplaires (U2, U5, U7).</li>
+<li><strong>Empreinte</strong>: <code>SI943C_REV_A</code>.</li>
+<li><strong>Description</strong>: Variateur de lumière (gradateur) à <strong>IGBT</strong> : chaque carte porte deux IGBT ST <code>STGD18N40LZT4</code> (390 V, 25 A, DPAK). Ce n'est <strong>pas</strong> un module de communication RF ; la carte SC940D ne comporte aucun module radio. Schéma et BOM : dépôt <code>essensys-board-SC843D</code> (<code>SC943D/</code>).</li>
+<li><strong>Interface</strong>: Connectée au PCB principal via des connecteurs headers, pilotée par le PIC16F946 (feuille <code>SC940D_Variateurs.SchDoc</code>).</li>
+</ul>
+<h2 id="3-chaine-dalimentation">3. Chaîne d'Alimentation</h2>
+<ul>
+<li><strong>Entrée</strong>: 12V DC (Nominale, fournie via connecteur).</li>
+<li><strong>Régulateur Principal</strong>: <strong>LMR12010YMK</strong> (Texas Instruments).<ul>
+<li>Type: Convertisseur DC-DC Step-down (Buck).</li>
+<li>Boîtier: SOT-23-6.</li>
+<li>Efficacité: Haute efficacité (&gt;85%) comparée aux régulateurs linéaires, idéal pour minimiser l'échauffement dans un boîtier fermé.</li>
+</ul>
+</li>
+<li><strong>Protection</strong>:<ul>
+<li><strong>VDR1, VR2, VR3</strong>: Varistances (équivalent <code>VDR_S10K_275</code> pour la suppression des transitoires sur le secteur/entrées.</li>
+<li><strong>SMF5V0A</strong>: Diodes TVS pour la protection ESD/Surtensions sur les lignes de signal basse tension.</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-actionneurs-interfaces">4. Actionneurs &amp; Interfaces</h2>
+<h3 id="sorties-relais">Sorties Relais</h3>
+<p>La carte dispose d'une haute densité de relais pour la commutation de charges :
+-   <strong>Relais Haute Puissance</strong>: Série <strong>Finder 40.61</strong> (16A, SPDT). Utilisés pour les charges principales.
+-   <strong>Relais Compacts</strong>: Série <strong>Finder 34.51</strong> (6A, Ultra-mince). Utilisés pour les canaux de faible puissance ou à espace contraint.
+-   <strong>Pilotes</strong>: <strong>ZXMN3A01F</strong> (MOSFETs Canal-N) utilisés pour piloter les bobines des relais.</p>
+<h3 id="connecteurs-borniers">Connecteurs / Borniers</h3>
+<ul>
+<li>Utilisation intensive de borniers PCB verticaux <strong>Phoenix Contact</strong> (série <code>FFKDS</code>) pour le câblage terrain (Capteurs, Bus, Alimentation).</li>
+<li><strong>HE10 / IDC</strong>: Le connecteur <code>IDC2P54_26P</code> implique une interface par câble nappe 26 broches, possiblement pour la programmation, l'extension ou la connexion en façade.</li>
+</ul>
+<h2 id="5-technologie-pcb">5. Technologie PCB</h2>
+<ul>
+<li><strong>Couches</strong>: Carte 4 Couches.<ul>
+<li><strong>L1 (Top)</strong>: Signaux &amp; Composants.</li>
+<li><strong>L2 (G1)</strong>: Plan de Masse Interne (GND) - Critique pour l'immunité au bruit.</li>
+<li><strong>L3 (G2)</strong>: Plan d'Alimentation Interne (VCC) - Probablement divisé pour 12V / 3.3V / 5V.</li>
+<li><strong>L4 (Bottom)</strong>: Signaux &amp; composants secondaires.</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Essensys
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
