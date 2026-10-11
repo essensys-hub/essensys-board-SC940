@@ -10,16 +10,16 @@ Le **SC940D** est une unité centrale de contrôle ("Boîtier Pièce de Vie") co
 ### Microcontrôleur (MCU)
 -   **Composant**: Microchip **PIC16F946** (MCU CMOS 8-bit).
 -   **Boîtier**: 64-pin TQFP (`PIC16F946-I/PT`).
--   **Rôle**: Gère la logique locale, les signaux de contrôle des relais, et s'interface avec le module de communication. 
+-   **Rôle**: Gère la logique locale, les signaux de contrôle des relais, et pilote les cartes gradateur SC943. 
     -   *Note*: Le PIC16F946 possède un pilote LCD, mais il a probablement été choisi ici pour son grand nombre d'entrées/sorties (64 broches) ou pour des raisons d'historique composant.
 
 ![MCU Schematic Detail](assets/images/schematic_p2.png)
 
-### Module de Communication ("Cœur")
--   **Composant**: **SC943-0C** (Module Personnalisé).
+### Cartes gradateur SC943 (variateurs)
+-   **Composant**: **SC943-0C** (carte fille « Carte gradateur », révision SC943D), 3 exemplaires (U2, U5, U7).
 -   **Empreinte**: `SI943C_REV_A`.
--   **Description**: Identifié comme une carte fille. Compte tenu de la nature du système, ce module gère probablement la communication RF (ex: LoRa, Zigbee, ou protocole propriétaire 868MHz).
--   **Interface**: Connecté au PCB principal via des connecteurs headers.
+-   **Description**: Variateur de lumière (gradateur) à **IGBT** : chaque carte porte deux IGBT ST `STGD18N40LZT4` (390 V, 25 A, DPAK). Ce n'est **pas** un module de communication RF ; la carte SC940D ne comporte aucun module radio. Schéma et BOM : dépôt `essensys-board-SC843D` (`SC943D/`).
+-   **Interface**: Connectée au PCB principal via des connecteurs headers, pilotée par le PIC16F946 (feuille `SC940D_Variateurs.SchDoc`).
 
 ## 3. Chaîne d'Alimentation
 -   **Entrée**: 12V DC (Nominale, fournie via connecteur).

@@ -22,6 +22,7 @@ nav:
     - Fichiers de Conception: hardware.md
     - Journal des Modifications: Hardware_ChangeLog.md
     - Recommandations DFM: DFM_Recommendations.md
+    - Retouche foudre: retouche-foudre.md
   - Firmware: firmware.md
   - Téléchargements: downloads.md
 
