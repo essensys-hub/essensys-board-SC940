@@ -1,0 +1,47 @@
+﻿Description,Fabricant,Ref Fab,Value,Quantity,Designator,Footprint
+Circuit imprimé,Valentinéa,SI940D,-,1,SI1,CIRCUIT_IMPRIME_SI_STD
+Carte gradateur,Valentinéa,SC943D,-,3,"U2, U5, U7",SI943C_REV_A
+"Résistance CMS 0805, 0.125W, 1%, 100ppm, 150V",Vishay,CRCW08050000Z0EA,0R,2,"R78, R80",0805_ReflowSoldering_RES
+"Résistance CMS 0805, 0.125W, 1%, 100ppm, 150V",Vishay,CRCW08051K00FKEA,1K,2,"R39, R77",0805_ReflowSoldering_RES
+"Résistance CMS 0805, 0.125W, 1%, 100ppm, 150V",Vishay,CRCW08052K20FKEA,2.2K,1,R71,0805_ReflowSoldering_RES
+"Résistance CMS 0805, 0.125W, 1%, 100ppm, 150V",Vishay,CRCW08056K80FKEA,6.8K,20,"R11, R14, R17, R20, R23, R26, R29, R32, R35, R38, R43, R48, R51, R54, R57, R60, R63, R66, R69, R72",0805_ReflowSoldering_RES
+"Résistance CMS 0805, 0.125W, 1%, 100ppm, 150V",Vishay,CRCW08059K10FKEA,9.1K,1,R4,0805_ReflowSoldering_RES
+"Résistance CMS 0805, 0.125W, 1%, 100ppm, 150V",Vishay,CRCW080510K0FKEA,10K,31,"R5, R6, R7, R8, R9, R12, R16, R18, R21, R24, R27, R31, R34, R36, R40, R41, R44, R45, R46, R49, R52, R55, R58, R61, R64, R67, R70, R73, R74, R75, R76",0805_ReflowSoldering_RES
+"Résistance CMS 0805, 0.125W, 1%, 100ppm, 150V",Vishay,CRCW080522K0FKEA,22K,19,"R10, R13, R15, R19, R22, R25, R28, R30, R33, R37, R42, R47, R50, R53, R56, R59, R62, R65, R68",0805_ReflowSoldering_RES
+"Résistance CMS 0805, 0.125W, 1%, 100ppm, 150V",Vishay,CRCW080547K0FKEA,47K,1,R3,0805_ReflowSoldering_RES
+"Condensateur céramique, NPO, 5%, CMS 0603",Kemet,C0603C180J5GAC,18pF/50V,2,"C21, C22",0603_ReflowSoldering_CAP
+"Condensateur céramique, X7R, 10%, CMS 0603",Kemet,C0603C103K5RAC,10nF/50V,1,C3,0603_ReflowSoldering_CAP
+"Condensateur céramique, X7R, 10%, CMS 0805",Kemet,C0805C104K5RAC,100nF/50V,31,"C1, C5, C6, C7, C8, C9, C10, C11, C12, C13, C14, C15, C16, C17, C18, C19, C20, C24, C26, C27, C28, C29, C30, C31, C32, C33, C34, C35, C36, C37, C38",0805_ReflowSoldering_CAP
+"Condensateur céramique, X5R, 10%, CMS 0805",Kemet,C0805C106K4PAC,10uF/16V,2,"C4, C39",0805_ReflowSoldering_CAP
+"Inductance bobinée CMS, 10uH +/- 10%, I=1.19A, Rdc=0.095R, SRF=40MHz, -40/+85°C",Wurth Elektronik,744043100,"10uH/1,19A",1,L1,SELF_WE-TPC_4.8x4.78_(type4828)
+"Ferrite multicouches CMS, imp=600R@100MHz, +/-25%, Rdc=100mR, I=2A",Wurth Elektronik,74279218,600R/100MHz,1,L2,1206_ReflowSoldering_FERRITE
+"Filtre EMI selfique-capacitif, -20/+50%, 25Vcc/6A, -40/+85°C",Murata,NFE31PT221D1E9L,220pF,1,FI1,NFE31P
+"Quartz CMS série HCM49 (équiv HC49/US), -10/+60°C, +/-30ppm, 18pF",Citizen,HCM49 20.000MABJ-UT,20MHz,1,Q1,QUARTZ_HC49_11.5X5_CMS
+"Diode de Redressement, Vrrm=100V, If=1A, Vf=1.1V, CMS",Fairchild,GF1B,-,1,D3,DO214BA-P
+"Diode Schottky double, BAT54 cathode com, Vrrm=30V, If=300mA, Vf=0.4Vmax, CMS",NXP,BAT54C,-,18,"D4, D7, D8, D9, D11, D15, D19, D23, D24, D25, D27, D29, D31, D34, D37, D39, D42, D43",SOT23_3L_ReflowSoldering
+"Diode Transil/TVS unidirectionnelle (A), 200W, 5V, CMS",Vishay,SMF5V0A,-,22,"D1, D2, D10, D12, D13, D14, D16, D17, D18, D20, D21, D22, D26, D28, D30, D32, D33, D35, D36, D38, D40, D41",DO219AB-SMF-P_ReflowSoldering
+"Varistance disque 275Vac, 350Vdc, 33J, Vbreak=430V@1mA, Vclamp=710V@10A, Ipeak=1200A",Wurth Elektronik,820572711,710V,3,"VR1, VR2, VR3",VDR_Serie_820_d7_h13_e5mm
+"LED vert, Vf 2V@20mA, 40mCd, vue 140°, CMS 0805
+LED vert, Vf 2,2V@20mA, 12mCd, vue 120°, CMS 0805","Wurth Elektronik
+Kingbright","150080VS75000
+KP2012-SGC",-,1,DL1,LED_0805_KPx_Green
+"Transistor MOSN logique, Vdss=30V, Id=2A, Rdson=0.12R, CMS",Zetex,ZXMN3A01F,-,30,"T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30",SOT23_3L_ReflowSoldering
+"Régulateur ajustable step down, 0.8~20V, 1A, Vin=3~20V, -40/+125°C, CMS",National Semiconductor,LMR12010YMK,-,1,U1,SOT23_6L
+"Superviseur de Reset pour microcontrolleur 3.08V -Pin SOT-23, CMS",ON,NCP803SN308T1G,-,1,U3,SOT23_3L_ReflowSoldering
+"Dual High-Speed 1.5A MOSFET Driver, CMS",Micrel,MIC4426YM,-,1,U6,"SOIC_08_E1,27_L150_ReflowSoldering"
+Microcontrôleur 8bit,Microchip,PIC16F946-I/PT,-,1,U4,"QFP_064_E0,50_10X10MM"
+"Relais 1RT, 12Vdc, série 34.51, Rc=1940R, Sw:250Vac/6A, Ron=? (AgSnO2)",Finder,34.51.7.012.4010,-,5,"K1, K2, K3, K16, K17",RELAY_FINDER_34.51_+SUPPORT_93
+"Relais 1RT, 12Vdc, série 40.61.6 (bistable), Rc=900R, Sw:250Vac/16A, Ron=? (AgSnO2)",Finder,40.61.6.012.4000,-,12,"K4, K5, K6, K7, K8, K9, K10, K11, K12, K13, K14, K15",RELAY_FINDER_40.61_+SUPPORT_95
+"Suppor série 93 pour relais Finder séries 34, 250V/6A, Bleu",Finder,93.11,-,5,"SUP_K1, SUP_K2, SUP_K3, SUP_K16, SUP_K17",RELAY-SUPPORT_FINDER_SERIE93
+"Suppor série 95 pour relais Finder séries 40, 250V/10A, Bleu, sans Etrier",Finder,95.15.2 SMA,-,12,"SUP_K4, SUP_K5, SUP_K6, SUP_K7, SUP_K8, SUP_K9, SUP_K10, SUP_K11, SUP_K12, SUP_K13, SUP_K14, SUP_K15",RELAY-SUPPORT_FINDER_SERIE95
+"Bornier à connexion par ressorts/déconnexion par levier, série FFKDS/V2, e5.08, 1x1pts, droit, juxtaposable, 320V/15A, AWG22~16, Vert/Orange",Phoenix Contact,1790348,-,13,"J5, J7, J10, J12, J15, J20, J43, J45, J62, J64, J75, J77, J80","BRESS_FFKDS/V2-5,08_P1.3"
+"Bornier à connexion par ressorts/déconnexion par levier, série FFKDSA/V2, e7.62, 1x1pts, droit, juxtaposable, 500V/17.5A, AWG22~16, Vert/Orange",Phoenix Contact,1790377,-,6,"J23, J40, J48, J59, J67, J72","BRESS_FFKDSA/V2-7,62_P1.3"
+"Bornier à connexion par ressorts/déconnexion par levier, série FFKDSA1/V2, e7.62, 1x1pts, droit, terminaison, 500V/17.5A, AWG22~16, Vert/Orange",Phoenix Contact,1790487,-,21,"J4, J9, J14, J17, J22, J25, J28, J31, J34, J37, J42, J47, J50, J53, J56, J61, J66, J69, J74, J79, J82","BRESS_FFKDSA1/V2-7,62_P1.3"
+"26 Positions Header, Shrouded Connector 0.100"" (2.54mm) Through Hole Gold",Wurth Elektronik,61202621621,-,1,J3,IDC2P54_26P
+"Embase type Micro Mate-n-Lok, e3mm, 4pts, droit, cont. étamés 20mR, 250V/5A, Iso 1500V, -40/+105°C",Wurth Elektronik,66200421122,-,2,"J1, J2",MICRO-MATE-N-LOK_WURTH+TYCO_2X02_D
+"RETOUCHE FOUDRE (tâche 2.2) : Résistance anti-impulsion CMS 0805, 0.5W, 5%, 47R, élément série de SDA/SCL entre J1/J2 et le PIC, remplace 0R ; équivalent Vishay CRCW080547R0FKEAHP ; 100R (ERJ-P06J101V) uniquement en option selon la tâche 3.8 (option renforcée posée côté BP avec pull-ups 2.2K), sinon 47R",Panasonic,ERJ-P06J470V,47R,2,"R1, R2",0805_ReflowSoldering_RES
+"RETOUCHE FOUDRE (tâche 2.3) : Fusible réarmable PTC CMS 1206 ou 1812, Vmax >= 30V, en montage volant sur fils courts entre les pastilles 0603 de R79, collé ; remplace 0R entre +VBUS et +Vin ; Ihold à 50°C >= 1.5 x courant d'entrée du BA mesuré, à dimensionner selon la mesure de la tâche 2.1 ; Ihold nettement inférieur et déclenchement plus rapide que la PTC de L31 du SC944D (sélectivité)",,,PTC >= 30V,1,R79,Montage volant sur empreinte 0603 de R79
+"RETOUCHE FOUDRE (tâche 2.4) : Diode Transil/TVS unidirectionnelle (A), 400W, 16V, CMS (ou Vishay SMF16A, 200W), montée en l'air sur fils courts sur les pastilles 0603 de C40, cathode sur +Vin, anode sur 0V, en aval de la PTC R79 ; C40 d'origine conservé ; jamais sur +VBUS ; repère DRF1 propre à la retouche, sans empreinte sur le circuit imprimé",Bourns,SMAJ16A,16V,1,DRF1,Montage volant sur pastilles 0603 de C40
+"RETOUCHE FOUDRE (tâche 2.5) : Condensateur céramique, X5R, 10%, CMS 0805, 10uF/35V, entrée de U1 (rail +12V), remplace 10uF/16V ; équivalent 35V X5R 0805 accepté",TDK,C2012X5R1V106K085AC,10uF/35V,1,C2,0805_ReflowSoldering_CAP
+"RETOUCHE FOUDRE (tâche 2.5) : Diode Schottky, Vrrm=40V, If=1A, CMS SOD-323F, remplace PMEG2020AEA (20V) ; courant compatible avec U1 LMR12010 (1A)",Nexperia,PMEG4010CEJ,-,1,D6,SOD323F
+"OPTION RENFORCÉE (tâche 2.7, si 2.6 l'autorise) : Diode Schottky double, BAT54 en série, Vrrm=30V, If=200mA, CMS SOT-23, montée en l'air côté PIC après R1, R2 sur les empreintes non montées C23, C25 (une par ligne) : anode sur la pastille 0V, point commun sur la ligne, cathode reliée au +5V par un fil court ; R1, R2 restent à 47R",Nexperia,"BAT54S,215",-,2,"C23, C25","Montage volant sur empreintes C23, C25"
